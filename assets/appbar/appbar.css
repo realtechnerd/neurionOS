@@ -32,6 +32,8 @@
 .appbar-item {
     background-color: transparent;
     border: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
 }
 .appbar-item img {
     height: 45px;
@@ -43,4 +45,10 @@
 .appbar-item img:hover {
     transition: 0.2s;
     background-color: #d3d3d3;
+}
+.fade {
+    transition: 0.1s;
+  }
+.activeapp {
+    border-bottom: 2px solid white;
 }
