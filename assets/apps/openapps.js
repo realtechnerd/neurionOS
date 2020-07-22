@@ -11,12 +11,12 @@ $( function() {
   } );
 function notePad() {
   name = 'Notepad';
-
-  $(theapp).height(250 - 34);
-
-  $( appwindow ).width( 250 );
   
-  $( appwindow ).height( 250 );
+  $(theapp).height(350 - 34);
+
+  $( appwindow ).width( 350 );
+  
+  $( appwindow ).height( 350 );
   
   theapp.src = "/notepad/";
   
