@@ -1,6 +1,6 @@
-var appname = document.getElementById('appname'); //The Name of the App
-var theapp = document.getElementById("theapp"); //The Actual App
-var appwindow = document.getElementById("appwindow");
+const appname = document.getElementById('appname'); //The Name of the App
+const theapp = document.getElementById("theapp"); //The Actual App
+const appwindow = document.getElementById("appwindow");
 let name;
 
 
@@ -9,20 +9,11 @@ $( function() {
       iframeFix: true
     });
   } );
-function notePad() {
-  name = 'Notepad';
-  
-  $(theapp).height(350 - 34);
 
-  $( appwindow ).width( 350 );
   
-  $( appwindow ).height( 350 );
-  
-  theapp.src = "/notepad/";
-  
-  $(appwindow).toggle("scale", 250);
-    
-  $(appname).html(name);
-  
-  $("#notepad").toggleClass("activeapp");
+function maxFix(app) {
+  app.style.top = "0";
+  app.style.left = "0"; 
+  app.style.borderRadius = "0";
+  appname.style.display = "none";
 }

@@ -23,6 +23,7 @@
     backdrop-filter: blur(0px);
     color: #d3d3d3;
     font-family: Manrope;
+    font-size: 12.5pt;
 }
 .appwindow {
     z-index: -10;
@@ -45,4 +46,7 @@
     width: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.appdetails {
+    overflow: hidden;
 }

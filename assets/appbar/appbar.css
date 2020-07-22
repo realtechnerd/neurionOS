@@ -8,6 +8,23 @@
     padding: 2.5px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
+.appdetails {
+    padding: 0px;
+}
+.appoptions button {
+    padding: 5px !important;
+    background-color: transparent;
+    border: none;
+    color: #d3d3d3;
+    border-radius: 5px;
+    font-size: 12.5pt;
+}
+.appoptions button:hover {
+    padding: 5px !important;
+    background-color: #333;
+    border: none;
+    color: #d3d3d3;
+}
 .appopen {
     color: #f1f1f1 !important;
     transition: 0.2s;

@@ -88,17 +88,27 @@
                     </div>
                   </div>
 
-
-
                   <div id="appwindow" class="appwindow fade2">
                     
-                    <div id="appname">
-                      
-                    </div>
+                  <nav class="appdetails navbar">
 
-                    <div class="app-body">
+                    <div id="appname" class="navbar-brand">
+                    </div>
+                    
+                    <ul class="appoptions nav justify-content-end">
+                        <button class="nav-item"><i class="fas fa-minus-circle"></i></button>
+
+                        <button class="nav-item" id="maxmini"><i class="fas fa-plus-circle"></i></button>
+                        
+                        <button class="nav-item" id="close"><i class="fas fa-times-circle"></i></button>
+                    </ul>
+                  
+                  </nav>
+                   
+                  <div class="app-body">
                       <iframe id="theapp" src=""></iframe>
                     </div>
+
                   </div>
 
 
@@ -141,7 +151,7 @@
 
               <ul class="appbar nav fixed-bottom">
                 <button class="appopen nav-item" data-toggle="modal" data-target="#centralModalSm">&ensp;<i class="fas fa-bolt"></i>&ensp;</button>
-                <button class="appbar-item" style="color: #f1f1f1;">|</button>
+                <button class="appbar-item" style="color: #f1f1f1;" onclick='notePad();'>|</button>
                 <button class="appbar-item nav-item"  id="notepad" onclick='notePad();'><i class="fas fa-pen-square"></i></button>
               </ul>
             
@@ -151,4 +161,5 @@
             <script src="/assets/topbar/topbar.js"></script>
             <script src="/assets/powerdialog/power.js"></script>
             <script src="/assets/apps/openapps.js"></script>
+            <script src="/apps/notepad/notepad.js"></script>
     </html>
