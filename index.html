@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        
+            <title>NeurionOS</title>
+        
+            <!--FRAMEWORKS AND LIBRARIES-->
+
+                <!--BOOTSTRAP-->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+                <!--JQUERY AND JQUERY UI-->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+                
+            <!--FONTS-->
+                <script src="https://kit.fontawesome.com/1983838e1f.js" crossorigin="anonymous"></script>
+                <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+            <!--SCRIPTS-->
+                <script src="/assets/topbar/topbar.js"></script>
+                <script src="/assets/powerdialog/power.js"></script>
+
+            <!--STYLES-->
+            <link rel="stylesheet" href="main.css">
+            <link rel="stylesheet" href="window.css">
+            <link rel="stylesheet" href="assets/appbar/appbar.css">
+            <link rel="stylesheet" href="assets/topbar/topbar.css">
+            <link rel="stylesheet" href="assets/apps/apps.css">
+            <link rel="stylesheet" href="assets/powerdialog/power.css">
+        </head>
+
+
+        
+        <body onload="startTime();">
+            
+
+            <ul class="fixed-top topbar nav">
+                
+                <button class="top-element nav-item nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-power-off"></i></button>
+                  
+                <div class="power-menu dropdown-menu">
+                  <button class="power dropdown-item" onclick="shutDownDialog();"data-toggle="modal" data-target="#exampleModalCenter">Shut Down</button>
+                  <button class="power dropdown-item">Sleep</a>
+                  <button class="power dropdown-item" onclick="restartDialog();"data-toggle="modal" data-target="#exampleModalCenter">Restart</button>
+                </div>
+
+                  <button class="top-element nav-link non-hover" href="#">NeurionOS</button>
+
+                  <button class="top-element nav-item nav-link float-right non-hover mr-auto" id="txt" href="#"></button>
+                  
+                  <button class="top-element nav-item nav-link" href="#"></button>
+              
+                </ul>
+                  
+
+
+                  
+                  <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                  
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  
+                  
+                      <div class="apps modal-content">
+
+                        <div class="apps-header modal-header">
+
+                            <h4 class="modal-title w-100" id="myModalLabel">All Apps</h4>
+                        
+                        </div>
+
+                        <div class="modal-body">
+                            
+                            <div class="container">
+                                <div class="row">
+                                  
+                                    <div class="col-sm">
+                                    <button class="apps-item nav-item" data-dismiss="modal"><i class="fas fa-file-image"></i><br>App</button>
+                                  </div>
+                                  
+                                  <div class="col-sm">
+                                    <button class="apps-item nav-item" data-dismiss="modal"><i class="fas fa-file-image"></i><br>App</button>
+                                  </div>
+                                  
+                                  <div class="col-sm">
+                                    <button class="apps-item nav-item" data-dismiss="modal"><i class="fas fa-file-image"></i><br>App</button>
+                                  </div>
+                                  
+                                  <div class="col-sm">
+                                    <button class="apps-item nav-item" data-dismiss="modal"><i class="fas fa-file-image"></i><br>App</button>
+                                  </div>
+
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div id="appwindow" class="appwindow">
+                    
+                    <div id="appname">
+                      
+                    </div>
+
+                    <div class="app-body">
+                      <iframe id="theapp" src=""></iframe>
+                    </div>
+                  </div>
+
+
+                  <!-- Power Dialogs -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                
+                        <div class="alert-msg modal-content">
+                
+                        <div class="alert-header border-0 modal-header">
+                
+                            <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                
+                        </div>
+                
+                        <div class="modal-body border-0">
+                
+                            <div id="dialog"></div>
+                
+                        </div>
+
+                        <div class="alert-options modal-footer border-0">
+                
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="option1"> <div id="option1msg"></div> </button>
+                
+                            <button type="button" class="btn btn-primary" id="option2"><div id="option2msg"></div></button>
+                
+                        </div>
+
+                      </div>
+                    
+                    </div>
+                  
+                </div>
+
+
+
+
+
+              <ul class="appbar nav fixed-bottom">
+                <button class="appopen appbar-item nav-item" data-toggle="modal" data-target="#centralModalSm"><i class="fas fa-bolt"></i></button>
+                <button class="appbar-item" style="color: #f1f1f1;">|</button>
+                <button class="appbar-item nav-item" onclick='notePad();'><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/33-slack_chat-512.png"></button>
+                <button class="appbar-item nav-item"><img src="https://www.freepnglogos.com/uploads/discord-logo-png/discord-icon-all-the-cool-kids-are-moving-discord-podfeet-podcasts-0.png"></button>
+                <button class="appbar-item nav-item"><img src="https://user-images.githubusercontent.com/674621/71187801-14e60a80-2280-11ea-94c9-e56576f76baf.png"></button>
+            </ul>
+            <script src="/assets/apps/openapps.js"></script>
+
+          </body>
+        
+    </html>

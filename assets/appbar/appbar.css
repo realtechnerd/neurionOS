@@ -1,0 +1,39 @@
+.appbar {
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.6);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15px;
+    padding: 2.5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.appopen {
+    color: #f1f1f1 !important;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+.appopen:hover {
+    background-color: rgba(241,241,241,0.25);
+    color: #d3d3d3 !important;
+    border-radius: 10px;
+}
+.appbar-item i {
+    font-size: 30px;
+    padding: 10px;
+}
+.appbar-item {
+    background-color: transparent;
+    border: none;
+}
+.appbar-item img {
+    height: 45px;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: white;
+}
+.appbar-item img:hover {
+    transition: 0.2s;
+    background-color: #d3d3d3;
+}

@@ -1,0 +1,29 @@
+.apps {
+    background-color: rgba(0,0,0,0.75);
+    color: #d3d3d3;
+    backdrop-filter: blur(10px);
+    border: none !important;
+    font-family: Manrope;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+.apps-header {
+    background-color: rgba(51, 51, 51, 0.25);
+    border: none;
+    padding: 10px;
+}
+.apps-item i {
+    font-size: 60px;
+}
+.apps-item img {
+    height: 60px;
+    transition: 0.2s;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: white;
+}
+.apps-item {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 30px;
+}
