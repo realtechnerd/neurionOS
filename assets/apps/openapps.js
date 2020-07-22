@@ -8,7 +8,10 @@ $( function() {
     });
   } );
 function notePad() {
+  $(theapp).height(250 - 34)
+  $( appwindow ).width( 250 );
+  $( appwindow ).height( 250 );
     theapp.src = "/notepad/";
-    $("#appwindow").toggle();
+    $(appwindow).toggle("scale");
     appname.innerHTML = "Notepad";
 }

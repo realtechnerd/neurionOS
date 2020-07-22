@@ -27,8 +27,6 @@
 .appwindow {
     z-index: -10;
     position: absolute;
-    height: 500px;
-    width: 500px;
     background-color: rgba(0,0,0,0.75);
     display: none;
     padding: 0px;
@@ -36,6 +34,7 @@
     position: absolute;
     top: 25%;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 .app-body {
     padding: 0;
@@ -43,7 +42,6 @@
 .app-body iframe {
     border: none;
     position: absolute; 
-    height: 466px; 
     width: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
