@@ -10,25 +10,14 @@ body {
   cursor: pointer;
 }
 ::-webkit-scrollbar-track {
-  background: white; 
   box-shadow: inset 0 0 5px grey; 
 }
 ::-webkit-scrollbar-thumb {
   background: #000000;
   border-radius: 10px;
 }
-  html, body {
-    height: 100%;
-    margin: 0;
-}
 textarea {
-  width: 100%;
+  border: none;
   resize: none !important;
-  height: 100% !important;
-  border: 0;
-  backdrop-filter: blur(10px);
-  color: #333;
-  font-size: 10pt !important;
-  font-family: Roboto Mono !important;
-  background: rgba(251, 251, 251, .5);
+  width: 100%;
 }
