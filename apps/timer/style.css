@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@font-face {
+  src: url(fonts/digital-7-mono.ttf);
+  font-family: digital;
+}
+body {
+  text-align: center;
+  background-color: #101820;
+  min-width: 700px;
+}
+/*NAV links*/
+nav {
+  font-family: digital, "Open Sans", sans-serif;
+  width: 100% !important;
+  height: 10% !important;
+  text-align: center !important;
+}
+.link {
+  width: 130px !important;
+  display: inline-block !important;
+  font-size: 20px !important;
+}
+#clock {
+  display: inline-block !important;
+  margin: 20px 40px !important;
+}
+#stopwatch {
+  margin: 20px 40px !important;
+  padding: 15px 25px !important;
+}
+#timer {
+  margin: 20px 40px !important;
+  border: solid white !important;
+}
+
+h1 {
+  color: rgb(59, 59, 255);
+  font-family: digital, "Open Sans", sans-serif;
+  font-size: 100px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.button {
+  background-color: rgb(59, 59, 255) /*#fee715*/;
+  color: #101820;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 60px 20px;
+  cursor: pointer;
+  border: none;
+  font-family: digital;
+  border-radius: 50px;
+  outline: currentColor;
+}
+.button:hover {
+  background-color: rgba(59, 59, 255, 0.747);
+}
+::selection {
+  background-color: blue;
+  color: black;
+}
+.display {
+  margin-top: +70px !important;
+}
+#input {
+  font-size: 100px;
+  text-align: center;
+  font-family: digital;
+  color: rgb(59, 59, 255);
+  background-color: #101820;
+  outline: none;
+  margin-top: 0px;
+  padding: 2px 0px;
+}
+.inner-input {
+  font-size: 100px;
+  text-align: center;
+  font-family: digital;
+  color: rgb(59, 59, 255);
+  border: none;
+  background-color: #101820;
+  outline: none;
+  width: 120px;
+  margin: -15px;
+}
+#display {
+  font-size: 100px;
+  color: rgb(59, 59, 255);
+  background-color: #101820;
+  text-align: center;
+  padding: 2px 0px;
+  margin: 0px 0px;
+}
+#debug {
+  color: red;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Scroll bar*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #101820;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 59, 255, 0.753) /*#888*/;
+}
