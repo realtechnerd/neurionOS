@@ -12,5 +12,7 @@ body {
     background-color: lightblue;
     background-image: url("https://wallpapershome.com/images/pages/pic_h/17125.jpg"); background-size: cover; background-position: center; background-attachment: fixed;
     overflow: hidden;
-    margin-bottom: -34px !important;
+}
+.active {
+    border: 10px solid #333;
 }

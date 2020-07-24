@@ -65,7 +65,4 @@
 }
 .fade {
     transition: 0.1s;
-  }
-.activeapp {
-    border-bottom: 2px solid white;
 }

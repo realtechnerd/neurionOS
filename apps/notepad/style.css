@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;523;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 * {
     outline: none;
   }
+body {
+  background-color: transparent;
+}
 ::-webkit-scrollbar {
   width: 5px;
   cursor: pointer;
@@ -23,8 +26,9 @@ textarea {
   resize: none !important;
   height: 100% !important;
   border: 0;
-  background-color: #f1f1f1;
+  backdrop-filter: blur(10px);
   color: #333;
-  font-size: 14pt !important;
-  font-family: Manrope !important;
+  font-size: 10pt !important;
+  font-family: Roboto Mono !important;
+  background: rgba(251, 251, 251, .5);
 }

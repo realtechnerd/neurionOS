@@ -9,13 +9,13 @@
             <!--FRAMEWORKS AND LIBRARIES-->
 
                 <!--BOOTSTRAP-->
-                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+                <script async src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
                 <!--JQUERY AND JQUERY UI-->
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
                 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
                 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
                 
@@ -55,9 +55,6 @@
               
                 </ul>
                   
-
-
-                  
                   <div class="modal fade" id="centralModalSm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
                     aria-hidden="true">
                   
@@ -78,7 +75,7 @@
                                 <div class="row">
                                   
                                     <div class="col-sm">
-                                      <button class="apps-item nav-item" data-dismiss="modal" onclick="notePad();"><i class="fas fa-pen-square"></i><br>Notepad</button>
+                                      <button class="apps-item nav-item" data-dismiss="modal" onclick="toggleNotePad();notePad();"><i class="fas fa-pen-square"></i><br>Notepad</button>
                                     </div>
 
                                 </div>
@@ -88,77 +85,30 @@
                     </div>
                   </div>
 
-                  <div id="appwindow" class="appwindow fade2">
-                    
-                  <nav id="appdetails" class="appdetails navbar">
 
-                    <div id="appname" class="navbar-brand">
-                    </div>
-                    
-                    <ul class="appoptions nav justify-content-end">
-                        <button class="nav-item"><i class="fas fa-minus-circle"></i></button>
-
-                        <button class="nav-item" id="maxmini"><i class="fas fa-plus-circle"></i></button>
-                        
-                        <button class="nav-item" id="close"><i class="fas fa-times-circle"></i></button>
-                    </ul>
-                  
-                  </nav>
-                   
-                  <div class="app-body">
-                      <iframe id="theapp" src="/apps/notepad/index.html"></iframe>
-                    </div>
-
-                  </div>
-
-
-                  <div id="appwindow" class="appwindow fade2">
+                  <div id="notepadapp" class="appwindow">
                     
                     <nav id="appdetails" class="appdetails navbar">
   
                       <div id="appname" class="navbar-brand">
+                        Notepad
                       </div>
                       
                       <ul class="appoptions nav justify-content-end">
                           <button class="nav-item"><i class="fas fa-minus-circle"></i></button>
   
-                          <button class="nav-item" id="maxmini"><i class="fas fa-plus-circle"></i></button>
+                          <button class="nav-item" id="maxmini" onclick="maxNotePadApp();"><i class="fas fa-plus-circle"></i></button>
                           
                           <button class="nav-item" id="close"><i class="fas fa-times-circle"></i></button>
                       </ul>
                     
                     </nav>
                      
-                    <div class="app-body">
-                        <iframe id="theapp" src="/apps/notepad/index.html"></iframe>
-                      </div>
+                        <div class="app-body">
+                          <iframe id="notepadframe" src="/apps/notepad/index.html"></iframe>
+                        </div>
   
                     </div>
-
-<br>
-                  <div id="appwindow" class="appwindow fade2">
-                    
-                    <nav id="appdetails" class="appdetails navbar">
-  
-                      <div id="appname" class="navbar-brand">
-                      </div>
-                      
-                      <ul class="appoptions nav justify-content-end">
-                          <button class="nav-item"><i class="fas fa-minus-circle"></i></button>
-  
-                          <button class="nav-item" id="maxmini"><i class="fas fa-plus-circle"></i></button>
-                          
-                          <button class="nav-item" id="close"><i class="fas fa-times-circle"></i></button>
-                      </ul>
-                    
-                    </nav>
-                     
-                    <div class="app-body">
-                        <iframe id="theapp"></iframe>
-                      </div>
-  
-                    </div>
-
                     
 
                   <!-- Power Dialogs -->
@@ -196,18 +146,16 @@
 
 
 
-
-
               <ul id="appbar" class="appbar nav fixed-bottom">
                 <button class="appopen nav-item" data-toggle="modal" data-target="#centralModalSm">&ensp;<i class="fas fa-bolt"></i>&ensp;</button>
-                <button class="appbar-item" style="color: #f1f1f1;" onclick='notePad();'>|</button>
-                <button class="appbar-item nav-item"  id="notepad" onclick='notePad();'><i class="fas fa-pen-square"></i></button>
+                <button class="appbar-item" style="color: #f1f1f1;">|</button>
+                <button class="appbar-item nav-item"  id="notepad" onclick="toggleNotePad();"><i class="fas fa-pen-square"></i></button>
               </ul>
             
 
           </body>
             <!--SCRIPTS-->
-            <script src="neurionOS/assets/topbar/topbar.js"></script>
+            <script src="/assets/topbar/topbar.js"></script>
             <script src="/assets/powerdialog/power.js"></script>
             <script src="/assets/apps/openapps.js"></script>
             <script src="/apps/notepad/notepad.js"></script>
