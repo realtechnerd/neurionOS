@@ -40,11 +40,13 @@
     border-radius: 50%;
 }
 .appbar-item i {
-    font-size: 45px;
+    font-size: 25px;
+    padding: 10px;
     transition: 0.2s;
     border: 2px solid transparent;
-    border-radius: 10px;
+    border-radius: 50%;
     color: white;
+    background-color: #333;
 }
 .appbar-item {
     background-color: transparent;
@@ -65,4 +67,7 @@
 }
 .fade {
     transition: 0.1s;
+}
+.active {
+    border-bottom: 2px solid #f1f1f1;
 }

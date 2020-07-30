@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
-* {
-    outline: none;
-  }
-body {
-  background-color: transparent;
-}
 ::-webkit-scrollbar {
   width: 5px;
   cursor: pointer;
@@ -16,8 +10,19 @@ body {
   background: #000000;
   border-radius: 10px;
 }
-textarea {
-  border: none;
-  resize: none !important;
-  width: 100%;
+* {
+  outline: none;
 }
+html, body {
+    margin: 0;
+}
+  textarea {
+    font-family: Roboto Mono !important;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+    resize: none !important;
+    background: transparent !important;
+    height: 100%;
+    border: 0;
+  }

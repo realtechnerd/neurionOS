@@ -1,3 +1,9 @@
+@import "window.css";
+@import "assets/appbar/appbar.css";
+@import "assets/topbar/topbar.css";
+@import "assets/apps/apps.css";
+@import "assets/powerdialog/power.css";
+
 * {
     outline: none;
     -webkit-touch-callout: none;
@@ -9,10 +15,6 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-    background-color: lightblue;
-    background-image: url("https://wallpapershome.com/images/pages/pic_h/17125.jpg"); background-size: cover; background-position: center; background-attachment: fixed;
+    background-image: url(/assets/imgs/neurion.png); background-size: cover; background-position: center; background-attachment: fixed;
     overflow: hidden;
-}
-.active {
-    border: 10px solid #333;
 }

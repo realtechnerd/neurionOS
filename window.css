@@ -19,7 +19,7 @@
     width: 25%;
 }
 .appdetails {
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.70);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -43,6 +43,7 @@
 }
 .app-body {
     padding: 0;
+    background-color: transparent;
 }
 .app-body iframe {
     border: solid 0;
@@ -51,7 +52,7 @@
     border-bottom-left-radius: 5px;
     backdrop-filter: blur(15px);
     width: 100%;
-    position: fixed;
+    background-color: transparent;
 }
 .appdetails {
     overflow: hidden;
