@@ -3,7 +3,7 @@
 @import "assets/topbar/topbar.css";
 @import "assets/apps/apps.css";
 @import "assets/powerdialog/power.css";
-
+@import "apps/settings/style.css";
 * {
     outline: none;
     -webkit-touch-callout: none;

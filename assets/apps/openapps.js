@@ -1,5 +1,5 @@
 $( function() {
-    $( ".appwindow" ).draggable({
+    $( ".window" ).draggable({
       iframeFix: true
     });
   } );
@@ -22,9 +22,7 @@ function closeApp(app) {
   $( app ).hide("fade", 100);
 }
 function openApp(app, body, width, height) {
-  $( app ).height(height);
-  $( app ).width(width);
-  $( body ).height(height);
+  $( app ).show("fade", 100);
   $( body ).width(width);
-  $( app ).show("fade",100);
+  $( body ).width(height);
 }

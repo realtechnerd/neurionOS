@@ -12,6 +12,7 @@
 }
 * {
   outline: none;
+  background-color: rgba(0,0,0,0.5);
 }
 html, body {
     margin: 0;
@@ -25,4 +26,8 @@ html, body {
     background: transparent !important;
     height: 100%;
     border: 0;
+    color: #d3d3d3;
+  }
+  ::placeholder {
+    color: gray;
   }

@@ -18,49 +18,36 @@
     padding: 5px;
     width: 25%;
 }
-.appdetails {
-    background-color: rgba(0,0,0,0.70);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+.window {
+    display: block;
+    position: absolute;
+    margin-top: 34px;
+    padding: 0;
+    border-radius: 2.5px;
+    width: 700px;
+    height: 400px;
+    border: none;
 }
-#appname {
-    padding: 5px;
-    backdrop-filter: blur(0px);
-    color: #d3d3d3;
+.windowhandle {
     font-family: Manrope;
-    font-size: 12.5pt;
+    background-color: rgba(0,0,0,0.75);
+    display: block;
+    border-top-left-radius: 2.5px;
+    border-top-right-radius: 2.5px;
+    color: #d3d3d3;
+    backdrop-filter: blur(10px);
 }
-.appwindow {
-    z-index: -10;
-    position: fixed;
-    background-color: transparent;
-    display: none;
-    padding: 0px;
-    backdrop-filter: blur(20px);
-    top: 25%;
-    border-radius: 5px;
+.app {
+    backdrop-filter: blur(10px);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
-.app-body {
-    padding: 0;
-    background-color: transparent;
-}
-.app-body iframe {
-    border: solid 0;
-    border-bottom: 50px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    backdrop-filter: blur(15px);
-    width: 100%;
-    background-color: transparent;
+.appiframe {
+    border: none;
+    border-bottom-left-radius: 2.5px;
+    border-bottom-right-radius: 2.5px;
+    width: 700px;
+    height: 400px;
 }
 .appdetails {
-    overflow: hidden;
-}
-.fullscreenapp {
-    border:none; 
-    display:block; 
-    width:100%; 
-    height:100%; 
-    overflow:hidden;
+    padding: 0px !important;
 }
